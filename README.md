@@ -3,7 +3,8 @@
 ## 概要
 * AWS SAM を使ってシンプルな API Gateway HTTP API を構築する
 
-![alt text](docs/images/infrastructure-composer-template.yaml.png)
+![alt text](docs/images/infrastructure-composer-template.yaml.png)  
+![alt text](docs/images/image.png)
 
 ## 環境情報
 ```
