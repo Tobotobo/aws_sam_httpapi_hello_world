@@ -71,7 +71,7 @@ sam delete --stack-name httpapi-hello-world
 ### Lambda 関数をローカルでテスト実行
 * VSCode の拡張機能 AWS Toolkit をインストールする
 * サイドバーに AWS が追加され、Lambda 関数をローカルで実行できる  
-    実行したい関数の ▶ をクリック
+    実行したい関数の ▶ をクリック  
     ![alt text](docs/images/image-1.png)  
     Invoke をクリック  
     ![alt text](docs/images/image-2.png)  
