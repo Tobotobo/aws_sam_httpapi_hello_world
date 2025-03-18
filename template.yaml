@@ -1,0 +1,35 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+  HelloWorldHttpApi:
+    Type: AWS::Serverless::HttpApi
+
+  HelloWorldFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/HelloWorldFunction
+      Handler: index.handler
+      Runtime: nodejs22.x
+      Architectures:
+        - x86_64
+      MemorySize: 512
+      Timeout: 10
+      Events:
+        index:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HelloWorldHttpApi
+            Path: /
+            Method: get
+        hello:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HelloWorldHttpApi
+            Path: /hello
+            Method: get
+
+Outputs:
+  HelloWorldHttpApi:
+    Description: Endpoint URL
+    Value: !Sub https://${HelloWorldHttpApi}.execute-api.${AWS::Region}.amazonaws.com/
