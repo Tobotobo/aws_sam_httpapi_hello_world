@@ -16,13 +16,13 @@ Resources:
       MemorySize: 512
       Timeout: 10
       Events:
-        index:
+        Root:
           Type: HttpApi
           Properties:
             ApiId: !Ref HelloWorldHttpApi
             Path: /
             Method: get
-        hello:
+        Hello:
           Type: HttpApi
           Properties:
             ApiId: !Ref HelloWorldHttpApi
